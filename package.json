@@ -9,6 +9,11 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "astro": "^1.0.0-beta.37"
+    "astro": "^1.0.0-beta.37",
+    "tailwindcss": "^3.0.24"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^0.2.1",
+    "@astrojs/vue": "^0.1.4"
   }
 }
