@@ -14,4 +14,23 @@
 .clip-bottom {
     clip-path: ellipse(85% 50% at 51% 100%);
 }
+
+.clip-bottom-2 {
+    clip-path: ellipse(535px 100% at 51% 100%);
+}
+.border-radius {
+    border-radius: 48% 52% 46% 54% / 31% 26% 74% 69% ;
+}
+
+body {
+   
+    background-color: #FFB876;
+}
+.trapezoid {
+	border-bottom: 45px solid #FFDF34;
+	
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 150px;
+}
 @tailwind utilities;
