@@ -6,7 +6,7 @@
     <img src="/food.jpg" class="clip-circle rounded-2xl" />
 
     <div class="flex flex-col items-center justify-center px-2 gap-4 mt-4">
-      <h4 class="text-xl font-bold text-center text-[#874200]">
+      <h4 class="text-xl font-bold text-center  text-[#874200] hover:opacity-80" @click.prevent="$emit('show-details')">
         Gobhi Aloo or Palak Paneer or Chicken Kadai
       </h4>
       <p class="text-gray-800 text-center">
@@ -70,7 +70,7 @@
 
       <button
         v-else
-        @click="addToCart = true"
+        @click="addToCartFunc"
         class="w-full bg-[#874200] py-3 rounded px-3 mb-2 mt-4 font-bold flex justify-between text-white"
       >
         <div class="flex-1 flex justify-center">
@@ -93,6 +93,13 @@ export default {
       items: 1,
     };
   },
+emits:['add-to-cart'],
+  methods: {
+    addToCartFunc() {
+      this.addToCart = true
+      this.$emit('add-to-cart')
+    }
+  }
 };
 </script>
 

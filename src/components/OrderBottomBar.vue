@@ -8,7 +8,7 @@
             </div>
 
             <div class="font-bold">
-                <a href="">View Order</a>
+                <a href="" @click.prevent="$emit('open-cart')" >View Order</a>
             </div>
 
             <div class="text-lg">
@@ -20,7 +20,11 @@
 
 <script>
 export default {
-
+   data() {
+    return  {
+        
+    }
+   }
 }
 </script>
 

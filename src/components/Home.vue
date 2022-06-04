@@ -13,17 +13,17 @@
         class="absolute h-64 -top-[4.5rem] w-full border-radius bg-[#FFB876]"
       >
         <div class="-mt-28">
-            <CardSection />
+            <CardSection @add-to-cart="openBottomBar = true" @show-details="showDetails = true" />
         </div>
       </div>
     </div>
 
-    <!-- <OrderBottomBar/> -->
-<!-- <MenuDetails />
-<WhereToDeliver /> -->
-<!-- <Cart /> -->
-<!-- <Checkout /> -->
-<!-- <About /> -->
+    <OrderBottomBar v-if="openBottomBar"   @open-cart="openCart=true"/>
+    <MenuDetails v-if="showDetails" />
+<WhereToDeliver v-if="showWheretoDeliver" />
+<Cart v-if="openCart" @close-cart="openCart = false" />
+<Checkout v-if="showCheckout"/>
+<About v-if="showAbout" />
 
   </div>
 </template>
@@ -39,6 +39,16 @@ import Cart from './Cart.vue'
 import Checkout from './Checkout.vue'
 import About from './About.vue'
 export default {
+  data() {
+     return {
+       openBottomBar:false,
+       openCart:false,
+       showDetails:false,
+       showWheretoDeliver:false,
+       showCheckout:false,
+       showAbout:false,
+     }
+  },
   components: {
     TopNav,
     HorizontalScroll,
